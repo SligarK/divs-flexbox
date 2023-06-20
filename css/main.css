@@ -97,41 +97,77 @@ textarea {
 
 
 html {
-  background-color: #040000;
-  height: 100%;
-  width: 100%;
+    background-color: #a8f9d2c1;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  padding: 2em;
-  height: 100%;
+    font-family: 'Diphylleia', serif;
+    padding: 0em 2em;
+    font-size: 1.25em;
+    color: #013f06;
+    display: flex;
+    justify-content: center;
 }
 
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 1200px;
 }
 
-.div-1, .div-2, .div-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #45fad8;
-  line-height: 1.5em;
-  font-size: 1em;
-  background-color: #020000;
-  height: auto;
-  width: 30%;
-  border: 10px dashed violet;
+p span {
+    font-family: 'Pacifico', cursive;
 }
 
+header,
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
 
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+}
 
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #013f06;
+}
+
+main p {
+    font-size: 1.35em;
+}
+
+.flex-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em;
+    font-size: 1em;
+    border-bottom: 1px solid #fff;
+    width: 30%;
+}
+
+#div-2 p {
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
+    padding: 0 40px;
+}
+
+footer {
+    border-top: 1px solid #013f06;
+}
+
+footer i {
+    padding: 30px 20px 0 0;
+}
 
 /* ==========================================================================
    Helper classes
@@ -199,8 +235,10 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -214,9 +252,9 @@ body {
    ========================================================================== */
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -227,11 +265,13 @@ body {
    ========================================================================== */
 
 @media print {
+
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
